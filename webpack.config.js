@@ -107,6 +107,7 @@ module.exports = {
 				]
 			}
     ],
+	},
 
 	optimization: {
 		splitChunks: {
@@ -124,5 +125,4 @@ module.exports = {
 		}
 	},
 
-	},
 };
