@@ -42,52 +42,27 @@ const precss = require('precss');
 
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
-
 /* Additional Imports: */
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 /* Custom File Paths: */
 
-const rootPath = __dirname;
-
-/* Sets basis for path variables. Only this root.path property should be changed if the
- * Webpack config file is moved to a different folder */
-
-
-const root = { 
-  path: () => __dirname,
-  src: {
-    path: () => path.resolve(root.path(), 'src'),
-    index_js: {
-      path: () => path.resolve(root.src.path(), "index.js"),
-
-    },
-  },
-  dist: {
-    path: () => path.resolve(root.path(), 'dist'),
-    bundle_js: {
-      path: () => path.resolve(root.dist.path(), 'bundle.js'), 
-    },
-    index_html: {
-      path: () => path.resolve(root.dist.path(), 'index.html'), 
-    },
-  },
-};
+const rootDir = __dirname;
 
 
 /****************************************************************/
-
 
 /* Final Config Export: */
 
 module.exports = {
 
   entry: {
-    app: path.resolve(rootPath, "src/index.js")
+    app: path.resolve(rootDir, "src/js/index.js")
   },
 
-	output: {
+  output: {
+    path: path.resolve(rootDir, 'dist'),
 		chunkFilename: '[name].[chunkhash].js',
     filename: 'bundle.js'
 	},
@@ -97,15 +72,15 @@ module.exports = {
   devtool: 'inline-source-map',
 
   devServer: {
-    contentBase: path.resolve(rootPath, 'dist'),
+    contentBase: path.resolve(rootDir, 'dist'),
     hot: true,
   },
   
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'ReasonML Practice'
-    }),
+      template: path.resolve(rootDir, 'src/html/index.html'),
+    }), 
     new webpack.HotModuleReplacementPlugin(),
   ],
 
@@ -141,6 +116,7 @@ module.exports = {
 	},
 
 	optimization: {
+    minimizer: [new UglifyJSPlugin()],
 		splitChunks: {
 			cacheGroups: {
 				vendors: {

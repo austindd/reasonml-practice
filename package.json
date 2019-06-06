@@ -7,11 +7,11 @@
     "bs-watch": "bsb -make-world -w",
     "bs-clean": "bsb -clean-world",
 
-    "wp-build": "webpack src/index.js dist/bundle.js",
+    "wp-build": "webpack src/js/index.js dist/bundle.js",
     "wp-watch": "webpack --watch",
     "wp-dev-server": "webpack-dev-server --open",
 
-    "start": "bsb -make-world && webpack src/index.js dist/bundle.js && webpack-dev-server --open",
+    "start": "npm run bs-build && npm run wp-build && npm run wp-dev-server",
     "build": "bsb -make-world && webpack src/index.js dist/bundle.js"
 
   },
