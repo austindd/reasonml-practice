@@ -6,9 +6,9 @@ var Caml_option = require("bs-platform/lib/js/caml_option.js");
 var Webapi__Dom__Document = require("bs-webapi/src/Webapi/Webapi__Dom/Webapi__Dom__Document.js");
 var Caml_builtin_exceptions = require("bs-platform/lib/js/caml_builtin_exceptions.js");
 
-function map(f, param) {
-  if (param !== undefined) {
-    return Caml_option.some(Curry._1(f, Caml_option.valFromOption(param)));
+function mapOption(f, v) {
+  if (v !== undefined) {
+    return Caml_option.some(Curry._1(f, Caml_option.valFromOption(v)));
   }
   
 }
@@ -33,6 +33,22 @@ function unwrapUnsafely(param) {
 
 console.log("Hello, BuckleScript and Reason!");
 
+function makeString(a, b, c) {
+  return a + (b + c);
+}
+
+var test1 = "Hi, ";
+
+var test2 = "my name is ";
+
+var test3 = "Austin";
+
+console.log(makeString(test1, test2, test3));
+
+function makePhoneNumber(countryCode, areaCode, number, extension) {
+  return countryCode + (areaCode + (number + extension));
+}
+
 var documentBody = andThen((function (prim) {
         return Caml_option.nullable_to_opt(prim.body);
       }), Webapi__Dom__Document.asHtmlDocument(document));
@@ -45,9 +61,14 @@ var header = document.createElement("h1");
 
 var appRoot$1 = (appRoot == null) ? undefined : Caml_option.some(appRoot);
 
-exports.map = map;
+exports.mapOption = mapOption;
 exports.andThen = andThen;
 exports.unwrapUnsafely = unwrapUnsafely;
+exports.makeString = makeString;
+exports.test1 = test1;
+exports.test2 = test2;
+exports.test3 = test3;
+exports.makePhoneNumber = makePhoneNumber;
 exports.documentBody = documentBody;
 exports.appRoot = appRoot$1;
 exports.header = header;
