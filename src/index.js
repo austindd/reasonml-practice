@@ -1,4 +1,6 @@
+import './Demo.bs.js';
 "use strict"
+
 
 let greeting = document.createElement('h1');
 let greetText = document.createTextNode('Hello World');
@@ -15,3 +17,9 @@ Object.assign(greeting.style, {
 document.body.appendChild(greeting);
 
 console.log("Done!");
+
+if (module.hot) {
+  module.hot.accept(function() {
+    console.log('Accepting the updated printMe module!'); 
+  });
+}
