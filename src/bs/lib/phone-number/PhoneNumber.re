@@ -1,16 +1,4 @@
-module type PhoneNumber = {
-  type phonNumber = {
-    countryCode: option(string),
-    areaCode: string,
-    prefix: string,
-    lineNumber: string,
-    extension: option(string),
-  };
-  type make = countryCode => areaCode => prefix => lineNumber => extension => phoneNumber;
-  type toString = phoneNumber => string;
-}
-
-module PhoneNumber: PhoneNumber {
+module PhoneNumber {
   /*
 
    TODO: provide types for all components of phoneNumber *outside* of the

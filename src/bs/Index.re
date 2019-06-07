@@ -19,8 +19,6 @@ Js.log("Hello, BuckleScript and Reason!");
 
 
 
-
-
 let makeString = (a: string, b: string, c: string) => a ++ b ++ c;
 
 let test1 = "Hi, "
@@ -35,11 +33,6 @@ Js.log(makeString(test1, test2, test3))
 let makePhoneNumber = (countryCode: string, areaCode: string, number: string, extension: string) =>
   countryCode ++ areaCode ++ number ++ extension
   
-
-
-
-
-
 
 
 open Webapi.Dom;

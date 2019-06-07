@@ -3,54 +3,19 @@
 
 var Curry = require("bs-platform/lib/js/curry.js");
 
-function _lift1(v, z) {
-  return Curry._1(z, v);
+function trace1(a) {
+  console.log(a);
+  return a;
 }
 
-function _lift2(v, z) {
-  return Curry._1(z, (function (param) {
-                return Curry._1(param, v);
-              }));
+function trace2(a, b) {
+  console.log(a, b);
+  return Curry._1(b, a);
 }
 
-function _lift3(v, z) {
-  return Curry._1(z, (function (param) {
-                return Curry._1(param, (function (param) {
-                              return _lift1(v, param);
-                            }));
-              }));
-}
-
-function _lift4(v, z) {
-  return Curry._1(z, (function (param) {
-                return Curry._1(param, (function (param) {
-                              return _lift2(v, param);
-                            }));
-              }));
-}
-
-function _lift5(v, z) {
-  return Curry._1(z, (function (param) {
-                return Curry._1(param, (function (param) {
-                              return _lift3(v, param);
-                            }));
-              }));
-}
-
-function _lift6(v, z) {
-  return Curry._1(z, (function (param) {
-                return Curry._1(param, (function (param) {
-                              return _lift4(v, param);
-                            }));
-              }));
-}
-
-function _lift7(v, z) {
-  return Curry._1(z, (function (param) {
-                return Curry._1(param, (function (param) {
-                              return _lift5(v, param);
-                            }));
-              }));
+function trace3(a, b, c) {
+  console.log(a, b, c);
+  return Curry._1(c, Curry._1(b, a));
 }
 
 function lift1(v, a) {
@@ -163,17 +128,16 @@ function b1(a, b, c, d) {
   return Curry._1(a, Curry._2(b, c, d));
 }
 
-function flip(a, b, b$1) {
-  return a;
+function flip(a, b) {
+  return /* tuple */[
+          b,
+          a
+        ];
 }
 
-exports._lift1 = _lift1;
-exports._lift2 = _lift2;
-exports._lift3 = _lift3;
-exports._lift4 = _lift4;
-exports._lift5 = _lift5;
-exports._lift6 = _lift6;
-exports._lift7 = _lift7;
+exports.trace1 = trace1;
+exports.trace2 = trace2;
+exports.trace3 = trace3;
 exports.lift1 = lift1;
 exports.lift2 = lift2;
 exports.lift3 = lift3;
