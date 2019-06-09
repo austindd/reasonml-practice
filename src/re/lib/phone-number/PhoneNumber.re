@@ -6,7 +6,18 @@ module PhoneNumber {
 
    */
 
-  let phoneNumber = {
+
+  open Composition;
+  open StringTools;
+
+  // Validate does nothing for now;
+  let validate = x => Some(x);
+  let validPhoneNumber: string => option(string) = p => {
+    if (String.length(p) > 18) None
+      else Some(p);
+  }
+
+  type phoneNumber = {
     countryCode: option(string),
     areaCode: string,
     prefix: string,
@@ -14,7 +25,21 @@ module PhoneNumber {
     extension: option(string),
   }
 
-  let make = countryCode => areaCode => prefix => lineNumber => extension = phoneNumber;
+  let optionAppendString1 = bindOption(appendString1);
+  let optionValidate = bindOption(validate);
+  
+
+  let make = countryCode => areaCode => prefix => lineNumber => extension => {
+    let baseStr = "";
+      Some(baseStr)
+      -> optionValidate(countryCode)
+      -> bindOption(validate(areaCode))
+      -> bindOption(validate(prefix))
+      -> bindOption(validate(lineNumber))
+      -> bindOption(validate(extension))
+      -> validPhoneNumber
+
+  }
 
   let toString = (p: phoneNumber) => {
     let result = ""  

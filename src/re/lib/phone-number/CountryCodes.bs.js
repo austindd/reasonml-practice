@@ -2,7 +2,12 @@
 'use strict';
 
 
-function validateCountryCode(codeOption) {
+var countryCodesArray = /* array */[
+  "93",
+  "355"
+];
+
+function optionCountryCode(codeOption) {
   if (codeOption !== undefined) {
     var code = codeOption;
     switch (code) {
@@ -17,7 +22,10 @@ function validateCountryCode(codeOption) {
   
 }
 
-var CountryCodes = /* module */[/* validateCountryCode */validateCountryCode];
+var CountryCodes = /* module */[
+  /* countryCodesArray */countryCodesArray,
+  /* optionCountryCode */optionCountryCode
+];
 
 exports.CountryCodes = CountryCodes;
 /* No side effect */

@@ -24,7 +24,7 @@ root.appendChild(greeting);
 
 
 
-import '../bs/Index.bs.js';
+import '../re/Index.bs.js';
 
 /*********************************/
 /* Webpack Hot Module Reloading: */
