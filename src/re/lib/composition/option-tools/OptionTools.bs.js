@@ -4,6 +4,10 @@
 var Curry = require("bs-platform/lib/js/curry.js");
 var Caml_option = require("bs-platform/lib/js/caml_option.js");
 
+function lift(x) {
+  return Caml_option.some(x);
+}
+
 function flatten(x) {
   if (x !== undefined) {
     var match = Caml_option.valFromOption(x);
@@ -23,11 +27,16 @@ function map(fn, x) {
   
 }
 
-function flatMap(fn, x) {
+function flatmap(fn, x) {
   return flatten(map(fn, x));
 }
 
-exports.flatten = flatten;
-exports.map = map;
-exports.flatMap = flatMap;
+var OptionTools = /* module */[
+  /* lift */lift,
+  /* flatten */flatten,
+  /* map */map,
+  /* flatmap */flatmap
+];
+
+exports.OptionTools = OptionTools;
 /* No side effect */

@@ -2,74 +2,79 @@
 'use strict';
 
 var Curry = require("bs-platform/lib/js/curry.js");
+var Belt_Option = require("bs-platform/lib/js/belt_Option.js");
 var Caml_option = require("bs-platform/lib/js/caml_option.js");
-var Webapi__Dom__Document = require("bs-webapi/src/Webapi/Webapi__Dom/Webapi__Dom__Document.js");
-var Caml_builtin_exceptions = require("bs-platform/lib/js/caml_builtin_exceptions.js");
+var Relude_Option = require("relude/src/Relude_Option.bs.js");
+var ReQuery$Practice = require("./lib/requery/ReQuery.bs.js");
+var Relude_Js_Console = require("relude/src/js/Relude_Js_Console.bs.js");
+var Webapi__Dom__Element = require("bs-webapi/src/Webapi/Webapi__Dom/Webapi__Dom__Element.js");
 
-function mapOption(f, v) {
-  if (v !== undefined) {
-    return Caml_option.some(Curry._1(f, Caml_option.valFromOption(v)));
-  }
-  
-}
+Relude_Js_Console.IO[/* log */0]("Hello, BuckleScript and Reason!");
 
-function andThen(f, param) {
-  if (param !== undefined) {
-    return Curry._1(f, Caml_option.valFromOption(param));
-  }
-  
-}
+var data = /* array */[
+  1,
+  2,
+  3
+];
 
-function unwrapUnsafely(param) {
-  if (param !== undefined) {
-    return Caml_option.valFromOption(param);
-  } else {
-    throw [
-          Caml_builtin_exceptions.invalid_argument,
-          "Passed `None` to unwrapUnsafely"
-        ];
-  }
-}
-
-console.log("Hello, BuckleScript and Reason!");
-
-function makeString(a, b, c) {
-  return a + (b + c);
-}
-
-var test1 = "Hi, ";
-
-var test2 = "my name is ";
-
-var test3 = "Austin";
-
-console.log(makeString(test1, test2, test3));
-
-function makePhoneNumber(countryCode, areaCode, number, extension) {
-  return countryCode + (areaCode + (number + extension));
-}
-
-var documentBody = andThen((function (prim) {
-        return Caml_option.nullable_to_opt(prim.body);
-      }), Webapi__Dom__Document.asHtmlDocument(document));
+var documentBody = Belt_Option.getExn(Webapi__Dom__Element.asHtmlElement(Belt_Option.getExn(Caml_option.nullable_to_opt(document.body))));
 
 console.log(documentBody);
 
-var appRoot = document.createElement("div").parentElement;
+function printClicked(param) {
+  console.log("CLICKED");
+  return /* () */0;
+}
 
-var header = document.createElement("h1");
+function applicationRoot_000(param) {
+  var el = document.createElement("div");
+  el.id = "applicationRoot";
+  el.className = "root";
+  el.setAttribute("style", "background-color: red; height: 200px; width: 200px;");
+  el.addEventListener("click", printClicked);
+  return el;
+}
 
-var appRoot$1 = (appRoot == null) ? undefined : Caml_option.some(appRoot);
+function applicationRoot_001(rootNode) {
+  var parent = Curry._2(Relude_Option.flatMap, Webapi__Dom__Element.ofNode, Caml_option.nullable_to_opt(rootNode.parentNode));
+  if (parent !== undefined) {
+    var p = Caml_option.valFromOption(parent);
+    var res = p.removeChild(rootNode);
+    console.log(p);
+    return Caml_option.some(res);
+  }
+  
+}
 
-exports.mapOption = mapOption;
-exports.andThen = andThen;
-exports.unwrapUnsafely = unwrapUnsafely;
-exports.makeString = makeString;
-exports.test1 = test1;
-exports.test2 = test2;
-exports.test3 = test3;
-exports.makePhoneNumber = makePhoneNumber;
-exports.documentBody = documentBody;
-exports.appRoot = appRoot$1;
-exports.header = header;
+var applicationRoot = /* record */[
+  applicationRoot_000,
+  applicationRoot_001
+];
+
+var root = Curry._1(applicationRoot_000, /* () */0);
+
+documentBody.appendChild(root);
+
+console.log(root);
+
+var headerAttrs = { };
+
+headerAttrs["color"] = "blue";
+
+var header = ReQuery$Practice.makeElement("h1", Caml_option.some(headerAttrs), undefined);
+
+console.log(header);
+
+var PracticeMain = /* module */[
+  /* RQ */0,
+  /* data */data,
+  /* documentBody */documentBody,
+  /* printClicked */printClicked,
+  /* applicationRoot */applicationRoot,
+  /* root */root,
+  /* headerAttrs */headerAttrs,
+  /* header */header
+];
+
+exports.PracticeMain = PracticeMain;
 /*  Not a pure module */

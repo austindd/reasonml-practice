@@ -22,6 +22,11 @@ Object.assign(greeting.style, {
 
 root.appendChild(greeting);
 
+let childNodes = greeting.childNodes;
+let children = greeting.children;
+
+console.dir(childNodes);
+console.dir(children);
 
 
 import '../re/Index.bs.js';
@@ -31,12 +36,15 @@ import '../re/Index.bs.js';
 /*********************************/
 if (module.hot) {
   module.hot.dispose(function() {
-
-    const elements = [root];
-
-    elements.forEach(el =>  el.parentNode.removeChild(el));
+    Array.prototype.slice.apply(document.body.children).forEach((node) => {
+      if(node.tagName.toUpperCase() === "SCRIPT") {
+        // do nothing
+      }
+      else {
+        document.body.removeChild(node);
+      }
+    });
     console.clear();
-
   });
   module.hot.accept(function() {
     console.clear();

@@ -85,25 +85,29 @@ function appendChar10(a, b, c, d, e, f, g, h, i, j, k) {
   return a + ($$String.make(1, b) + ($$String.make(1, c) + ($$String.make(1, d) + ($$String.make(1, e) + ($$String.make(1, f) + ($$String.make(1, g) + ($$String.make(1, h) + ($$String.make(1, i) + ($$String.make(1, j) + $$String.make(1, k))))))))));
 }
 
-exports.appendString1 = appendString1;
-exports.appendString2 = appendString2;
-exports.appendString3 = appendString3;
-exports.appendString4 = appendString4;
-exports.appendString5 = appendString5;
-exports.appendString6 = appendString6;
-exports.appendString7 = appendString7;
-exports.appendString8 = appendString8;
-exports.appendString9 = appendString9;
-exports.appendString10 = appendString10;
-exports.unsafeArrayJoin = unsafeArrayJoin;
-exports.appendChar1 = appendChar1;
-exports.appendChar2 = appendChar2;
-exports.appendChar3 = appendChar3;
-exports.appendChar4 = appendChar4;
-exports.appendChar5 = appendChar5;
-exports.appendChar6 = appendChar6;
-exports.appendChar7 = appendChar7;
-exports.appendChar8 = appendChar8;
-exports.appendChar9 = appendChar9;
-exports.appendChar10 = appendChar10;
+var StringTools = /* module */[
+  /* appendString1 */appendString1,
+  /* appendString2 */appendString2,
+  /* appendString3 */appendString3,
+  /* appendString4 */appendString4,
+  /* appendString5 */appendString5,
+  /* appendString6 */appendString6,
+  /* appendString7 */appendString7,
+  /* appendString8 */appendString8,
+  /* appendString9 */appendString9,
+  /* appendString10 */appendString10,
+  /* unsafeArrayJoin */unsafeArrayJoin,
+  /* appendChar1 */appendChar1,
+  /* appendChar2 */appendChar2,
+  /* appendChar3 */appendChar3,
+  /* appendChar4 */appendChar4,
+  /* appendChar5 */appendChar5,
+  /* appendChar6 */appendChar6,
+  /* appendChar7 */appendChar7,
+  /* appendChar8 */appendChar8,
+  /* appendChar9 */appendChar9,
+  /* appendChar10 */appendChar10
+];
+
+exports.StringTools = StringTools;
 /* unsafeArrayJoin Not a pure module */

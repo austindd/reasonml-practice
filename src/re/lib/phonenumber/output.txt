@@ -1,0 +1,248 @@
+afghanistan: { name: "Afghanistan",  a2: "AF", a3: "AFG", num: "4", dial: "93" }
+albania: { name: "Albania",  a2: "AL", a3: "ALB", num: "8", dial: "355" }
+algeria: { name: "Algeria",  a2: "DZ", a3: "DZA", num: "12", dial: "213" }
+americanSamoa: { name: "American Samoa",  a2: "AS", a3: "ASM", num: "16", dial: "1-684" }
+andorra: { name: "Andorra",  a2: "AD", a3: "AND", num: "20", dial: "376" }
+angola: { name: "Angola",  a2: "AO", a3: "AGO", num: "24", dial: "244" }
+anguilla: { name: "Anguilla",  a2: "AI", a3: "AIA", num: "660", dial: "1-264" }
+antarctica: { name: "Antarctica",  a2: "AQ", a3: "ATA", num: "10", dial: "672" }
+antiguaandBarbuda: { name: "Antigua and Barbuda",  a2: "AG", a3: "ATG", num: "28", dial: "1-268" }
+argentina: { name: "Argentina",  a2: "AR", a3: "ARG", num: "32", dial: "54" }
+armenia: { name: "Armenia",  a2: "AM", a3: "ARM", num: "51", dial: "374" }
+aruba: { name: "Aruba",  a2: "AW", a3: "ABW", num: "533", dial: "297" }
+australia: { name: "Australia",  a2: "AU", a3: "AUS", num: "36", dial: "61" }
+austria: { name: "Austria",  a2: "AT", a3: "AUT", num: "40", dial: "43" }
+azerbaijan: { name: "Azerbaijan",  a2: "AZ", a3: "AZE", num: "31", dial: "994" }
+bahamas: { name: "Bahamas",  a2: "BS", a3: "BHS", num: "44", dial: "1-242" }
+bahrain: { name: "Bahrain",  a2: "BH", a3: "BHR", num: "48", dial: "973" }
+bangladesh: { name: "Bangladesh",  a2: "BD", a3: "BGD", num: "50", dial: "880" }
+barbados: { name: "Barbados",  a2: "BB", a3: "BRB", num: "52", dial: "1-246" }
+belarus: { name: "Belarus",  a2: "BY", a3: "BLR", num: "112", dial: "375" }
+belgium: { name: "Belgium",  a2: "BE", a3: "BEL", num: "56", dial: "32" }
+belize: { name: "Belize",  a2: "BZ", a3: "BLZ", num: "84", dial: "501" }
+benin: { name: "Benin",  a2: "BJ", a3: "BEN", num: "204", dial: "229" }
+bermuda: { name: "Bermuda",  a2: "BM", a3: "BMU", num: "60", dial: "1-441" }
+bhutan: { name: "Bhutan",  a2: "BT", a3: "BTN", num: "64", dial: "975" }
+bolivia: { name: "Bolivia",  a2: "BO", a3: "BOL", num: "68", dial: "591" }
+bonaire: { name: "Bonaire",  a2: "BQ", a3: "BES", num: "535", dial: "599" }
+bosniaandHerzegovina: { name: "Bosnia and Herzegovina",  a2: "BA", a3: "BIH", num: "70", dial: "387" }
+botswana: { name: "Botswana",  a2: "BW", a3: "BWA", num: "72", dial: "267" }
+bouvetIsland: { name: "Bouvet Island",  a2: "BV", a3: "BVT", num: "74", dial: "47" }
+brazil: { name: "Brazil",  a2: "BR", a3: "BRA", num: "76", dial: "55" }
+britishIndianOceanTerritory: { name: "British Indian Ocean Territory",  a2: "IO", a3: "IOT", num: "86", dial: "246" }
+bruneiDarussalam: { name: "Brunei Darussalam",  a2: "BN", a3: "BRN", num: "96", dial: "673" }
+bulgaria: { name: "Bulgaria",  a2: "BG", a3: "BGR", num: "100", dial: "359" }
+burkinaFaso: { name: "Burkina Faso",  a2: "BF", a3: "BFA", num: "854", dial: "226" }
+burundi: { name: "Burundi",  a2: "BI", a3: "BDI", num: "108", dial: "257" }
+cambodia: { name: "Cambodia",  a2: "KH", a3: "KHM", num: "116", dial: "855" }
+cameroon: { name: "Cameroon",  a2: "CM", a3: "CMR", num: "120", dial: "237" }
+canada: { name: "Canada",  a2: "CA", a3: "CAN", num: "124", dial: "1" }
+capeVerde: { name: "Cape Verde",  a2: "CV", a3: "CPV", num: "132", dial: "238" }
+caymanIslands: { name: "Cayman Islands",  a2: "KY", a3: "CYM", num: "136", dial: "1-345" }
+centralAfricanRepublic: { name: "Central African Republic",  a2: "CF", a3: "CAF", num: "140", dial: "236" }
+chad: { name: "Chad",  a2: "TD", a3: "TCD", num: "148", dial: "235" }
+chile: { name: "Chile",  a2: "CL", a3: "CHL", num: "152", dial: "56" }
+china: { name: "China",  a2: "CN", a3: "CHN", num: "156", dial: "86" }
+christmasIsland: { name: "Christmas Island",  a2: "CX", a3: "CXR", num: "162", dial: "61" }
+cocosKeelingIslands: { name: "Cocos (Keeling) Islands",  a2: "CC", a3: "CCK", num: "166", dial: "61" }
+colombia: { name: "Colombia",  a2: "CO", a3: "COL", num: "170", dial: "57" }
+comoros: { name: "Comoros",  a2: "KM", a3: "COM", num: "174", dial: "269" }
+congo: { name: "Congo",  a2: "CG", a3: "COG", num: "178", dial: "242" }
+democraticRepublicoftheCongo: { name: "Democratic Republic of the Congo",  a2: "CD", a3: "COD", num: "180", dial: "243" }
+cookIslands: { name: "Cook Islands",  a2: "CK", a3: "COK", num: "184", dial: "682" }
+costaRica: { name: "Costa Rica",  a2: "CR", a3: "CRI", num: "188", dial: "506" }
+croatia: { name: "Croatia",  a2: "HR", a3: "HRV", num: "191", dial: "385" }
+cuba: { name: "Cuba",  a2: "CU", a3: "CUB", num: "192", dial: "53" }
+curacao: { name: "Curacao",  a2: "CW", a3: "CUW", num: "531", dial: "599" }
+cyprus: { name: "Cyprus",  a2: "CY", a3: "CYP", num: "196", dial: "357" }
+czechRepublic: { name: "Czech Republic",  a2: "CZ", a3: "CZE", num: "203", dial: "420" }
+coted'Ivoire: { name: "Cote d'Ivoire",  a2: "CI", a3: "CIV", num: "384", dial: "225" }
+denmark: { name: "Denmark",  a2: "DK", a3: "DNK", num: "208", dial: "45" }
+djibouti: { name: "Djibouti",  a2: "DJ", a3: "DJI", num: "262", dial: "253" }
+dominica: { name: "Dominica",  a2: "DM", a3: "DMA", num: "212", dial: "1-767" }
+dominicanRepublic: { name: "Dominican Republic",  a2: "DO", a3: "DOM", num: "214", dial: "1-809,1-829,1-849" }
+ecuador: { name: "Ecuador",  a2: "EC", a3: "ECU", num: "218", dial: "593" }
+egypt: { name: "Egypt",  a2: "EG", a3: "EGY", num: "818", dial: "20" }
+elSalvador: { name: "El Salvador",  a2: "SV", a3: "SLV", num: "222", dial: "503" }
+equatorialGuinea: { name: "Equatorial Guinea",  a2: "GQ", a3: "GNQ", num: "226", dial: "240" }
+eritrea: { name: "Eritrea",  a2: "ER", a3: "ERI", num: "232", dial: "291" }
+estonia: { name: "Estonia",  a2: "EE", a3: "EST", num: "233", dial: "372" }
+ethiopia: { name: "Ethiopia",  a2: "ET", a3: "ETH", num: "231", dial: "251" }
+falklandIslandsMalvinas: { name: "Falkland Islands (Malvinas)",  a2: "FK", a3: "FLK", num: "238", dial: "500" }
+faroeIslands: { name: "Faroe Islands",  a2: "FO", a3: "FRO", num: "234", dial: "298" }
+fiji: { name: "Fiji",  a2: "FJ", a3: "FJI", num: "242", dial: "679" }
+finland: { name: "Finland",  a2: "FI", a3: "FIN", num: "246", dial: "358" }
+france: { name: "France",  a2: "FR", a3: "FRA", num: "250", dial: "33" }
+frenchGuiana: { name: "French Guiana",  a2: "GF", a3: "GUF", num: "254", dial: "594" }
+frenchPolynesia: { name: "French Polynesia",  a2: "PF", a3: "PYF", num: "258", dial: "689" }
+frenchSouthernTerritories: { name: "French Southern Territories",  a2: "TF", a3: "ATF", num: "260", dial: "262" }
+gabon: { name: "Gabon",  a2: "GA", a3: "GAB", num: "266", dial: "241" }
+gambia: { name: "Gambia",  a2: "GM", a3: "GMB", num: "270", dial: "220" }
+georgia: { name: "Georgia",  a2: "GE", a3: "GEO", num: "268", dial: "995" }
+germany: { name: "Germany",  a2: "DE", a3: "DEU", num: "276", dial: "49" }
+ghana: { name: "Ghana",  a2: "GH", a3: "GHA", num: "288", dial: "233" }
+gibraltar: { name: "Gibraltar",  a2: "GI", a3: "GIB", num: "292", dial: "350" }
+greece: { name: "Greece",  a2: "GR", a3: "GRC", num: "300", dial: "30" }
+greenland: { name: "Greenland",  a2: "GL", a3: "GRL", num: "304", dial: "299" }
+grenada: { name: "Grenada",  a2: "GD", a3: "GRD", num: "308", dial: "1-473" }
+guadeloupe: { name: "Guadeloupe",  a2: "GP", a3: "GLP", num: "312", dial: "590" }
+guam: { name: "Guam",  a2: "GU", a3: "GUM", num: "316", dial: "1-671" }
+guatemala: { name: "Guatemala",  a2: "GT", a3: "GTM", num: "320", dial: "502" }
+guernsey: { name: "Guernsey",  a2: "GG", a3: "GGY", num: "831", dial: "44" }
+guinea: { name: "Guinea",  a2: "GN", a3: "GIN", num: "324", dial: "224" }
+guineaBissau: { name: "Guinea-Bissau",  a2: "GW", a3: "GNB", num: "624", dial: "245" }
+guyana: { name: "Guyana",  a2: "GY", a3: "GUY", num: "328", dial: "592" }
+haiti: { name: "Haiti",  a2: "HT", a3: "HTI", num: "332", dial: "509" }
+heardIslandandMcDonaldIslands: { name: "Heard Island and McDonald Islands",  a2: "HM", a3: "HMD", num: "334", dial: "672" }
+holySeeVaticanCityState: { name: "Holy See (Vatican City State)",  a2: "VA", a3: "VAT", num: "336", dial: "379" }
+honduras: { name: "Honduras",  a2: "HN", a3: "HND", num: "340", dial: "504" }
+hongKong: { name: "Hong Kong",  a2: "HK", a3: "HKG", num: "344", dial: "852" }
+hungary: { name: "Hungary",  a2: "HU", a3: "HUN", num: "348", dial: "36" }
+iceland: { name: "Iceland",  a2: "IS", a3: "ISL", num: "352", dial: "354" }
+india: { name: "India",  a2: "IN", a3: "IND", num: "356", dial: "91" }
+indonesia: { name: "Indonesia",  a2: "ID", a3: "IDN", num: "360", dial: "62" }
+iran,IslamicRepublicof: { name: "Iran, Islamic Republic of",  a2: "IR", a3: "IRN", num: "364", dial: "98" }
+iraq: { name: "Iraq",  a2: "IQ", a3: "IRQ", num: "368", dial: "964" }
+ireland: { name: "Ireland",  a2: "IE", a3: "IRL", num: "372", dial: "353" }
+isleofMan: { name: "Isle of Man",  a2: "IM", a3: "IMN", num: "833", dial: "44" }
+israel: { name: "Israel",  a2: "IL", a3: "ISR", num: "376", dial: "972" }
+italy: { name: "Italy",  a2: "IT", a3: "ITA", num: "380", dial: "39" }
+jamaica: { name: "Jamaica",  a2: "JM", a3: "JAM", num: "388", dial: "1-876" }
+japan: { name: "Japan",  a2: "JP", a3: "JPN", num: "392", dial: "81" }
+jersey: { name: "Jersey",  a2: "JE", a3: "JEY", num: "832", dial: "44" }
+jordan: { name: "Jordan",  a2: "JO", a3: "JOR", num: "400", dial: "962" }
+kazakhstan: { name: "Kazakhstan",  a2: "KZ", a3: "KAZ", num: "398", dial: "7" }
+kenya: { name: "Kenya",  a2: "KE", a3: "KEN", num: "404", dial: "254" }
+kiribati: { name: "Kiribati",  a2: "KI", a3: "KIR", num: "296", dial: "686" }
+korea,DemocraticPeople'sRepublicof: { name: "Korea, Democratic People's Republic of",  a2: "KP", a3: "PRK", num: "408", dial: "850" }
+korea,Republicof: { name: "Korea, Republic of",  a2: "KR", a3: "KOR", num: "410", dial: "82" }
+kuwait: { name: "Kuwait",  a2: "KW", a3: "KWT", num: "414", dial: "965" }
+kyrgyzstan: { name: "Kyrgyzstan",  a2: "KG", a3: "KGZ", num: "417", dial: "996" }
+laoPeople'sDemocraticRepublic: { name: "Lao People's Democratic Republic",  a2: "LA", a3: "LAO", num: "418", dial: "856" }
+latvia: { name: "Latvia",  a2: "LV", a3: "LVA", num: "428", dial: "371" }
+lebanon: { name: "Lebanon",  a2: "LB", a3: "LBN", num: "422", dial: "961" }
+lesotho: { name: "Lesotho",  a2: "LS", a3: "LSO", num: "426", dial: "266" }
+liberia: { name: "Liberia",  a2: "LR", a3: "LBR", num: "430", dial: "231" }
+libya: { name: "Libya",  a2: "LY", a3: "LBY", num: "434", dial: "218" }
+liechtenstein: { name: "Liechtenstein",  a2: "LI", a3: "LIE", num: "438", dial: "423" }
+lithuania: { name: "Lithuania",  a2: "LT", a3: "LTU", num: "440", dial: "370" }
+luxembourg: { name: "Luxembourg",  a2: "LU", a3: "LUX", num: "442", dial: "352" }
+macao: { name: "Macao",  a2: "MO", a3: "MAC", num: "446", dial: "853" }
+macedonia,theFormerYugoslavRepublicof: { name: "Macedonia, the Former Yugoslav Republic of",  a2: "MK", a3: "MKD", num: "807", dial: "389" }
+madagascar: { name: "Madagascar",  a2: "MG", a3: "MDG", num: "450", dial: "261" }
+malawi: { name: "Malawi",  a2: "MW", a3: "MWI", num: "454", dial: "265" }
+malaysia: { name: "Malaysia",  a2: "MY", a3: "MYS", num: "458", dial: "60" }
+maldives: { name: "Maldives",  a2: "MV", a3: "MDV", num: "462", dial: "960" }
+mali: { name: "Mali",  a2: "ML", a3: "MLI", num: "466", dial: "223" }
+malta: { name: "Malta",  a2: "MT", a3: "MLT", num: "470", dial: "356" }
+marshallIslands: { name: "Marshall Islands",  a2: "MH", a3: "MHL", num: "584", dial: "692" }
+martinique: { name: "Martinique",  a2: "MQ", a3: "MTQ", num: "474", dial: "596" }
+mauritania: { name: "Mauritania",  a2: "MR", a3: "MRT", num: "478", dial: "222" }
+mauritius: { name: "Mauritius",  a2: "MU", a3: "MUS", num: "480", dial: "230" }
+mayotte: { name: "Mayotte",  a2: "YT", a3: "MYT", num: "175", dial: "262" }
+mexico: { name: "Mexico",  a2: "MX", a3: "MEX", num: "484", dial: "52" }
+micronesia,FederatedStatesof: { name: "Micronesia, Federated States of",  a2: "FM", a3: "FSM", num: "583", dial: "691" }
+moldova,Republicof: { name: "Moldova, Republic of",  a2: "MD", a3: "MDA", num: "498", dial: "373" }
+monaco: { name: "Monaco",  a2: "MC", a3: "MCO", num: "492", dial: "377" }
+mongolia: { name: "Mongolia",  a2: "MN", a3: "MNG", num: "496", dial: "976" }
+montenegro: { name: "Montenegro",  a2: "ME", a3: "MNE", num: "499", dial: "382" }
+montserrat: { name: "Montserrat",  a2: "MS", a3: "MSR", num: "500", dial: "1-664" }
+morocco: { name: "Morocco",  a2: "MA", a3: "MAR", num: "504", dial: "212" }
+mozambique: { name: "Mozambique",  a2: "MZ", a3: "MOZ", num: "508", dial: "258" }
+myanmar: { name: "Myanmar",  a2: "MM", a3: "MMR", num: "104", dial: "95" }
+namibia: { name: "Namibia",  a2: "NA", a3: "NAM", num: "516", dial: "264" }
+nauru: { name: "Nauru",  a2: "NR", a3: "NRU", num: "520", dial: "674" }
+nepal: { name: "Nepal",  a2: "NP", a3: "NPL", num: "524", dial: "977" }
+netherlands: { name: "Netherlands",  a2: "NL", a3: "NLD", num: "528", dial: "31" }
+newCaledonia: { name: "New Caledonia",  a2: "NC", a3: "NCL", num: "540", dial: "687" }
+newZealand: { name: "New Zealand",  a2: "NZ", a3: "NZL", num: "554", dial: "64" }
+nicaragua: { name: "Nicaragua",  a2: "NI", a3: "NIC", num: "558", dial: "505" }
+niger: { name: "Niger",  a2: "NE", a3: "NER", num: "562", dial: "227" }
+nigeria: { name: "Nigeria",  a2: "NG", a3: "NGA", num: "566", dial: "234" }
+niue: { name: "Niue",  a2: "NU", a3: "NIU", num: "570", dial: "683" }
+norfolkIsland: { name: "Norfolk Island",  a2: "NF", a3: "NFK", num: "574", dial: "672" }
+northernMarianaIslands: { name: "Northern Mariana Islands",  a2: "MP", a3: "MNP", num: "580", dial: "1-670" }
+norway: { name: "Norway",  a2: "NO", a3: "NOR", num: "578", dial: "47" }
+oman: { name: "Oman",  a2: "OM", a3: "OMN", num: "512", dial: "968" }
+pakistan: { name: "Pakistan",  a2: "PK", a3: "PAK", num: "586", dial: "92" }
+palau: { name: "Palau",  a2: "PW", a3: "PLW", num: "585", dial: "680" }
+palestine,Stateof: { name: "Palestine, State of",  a2: "PS", a3: "PSE", num: "275", dial: "970" }
+panama: { name: "Panama",  a2: "PA", a3: "PAN", num: "591", dial: "507" }
+papuaNewGuinea: { name: "Papua New Guinea",  a2: "PG", a3: "PNG", num: "598", dial: "675" }
+paraguay: { name: "Paraguay",  a2: "PY", a3: "PRY", num: "600", dial: "595" }
+peru: { name: "Peru",  a2: "PE", a3: "PER", num: "604", dial: "51" }
+philippines: { name: "Philippines",  a2: "PH", a3: "PHL", num: "608", dial: "63" }
+pitcairn: { name: "Pitcairn",  a2: "PN", a3: "PCN", num: "612", dial: "870" }
+poland: { name: "Poland",  a2: "PL", a3: "POL", num: "616", dial: "48" }
+portugal: { name: "Portugal",  a2: "PT", a3: "PRT", num: "620", dial: "351" }
+puertoRico: { name: "Puerto Rico",  a2: "PR", a3: "PRI", num: "630", dial: "1" }
+qatar: { name: "Qatar",  a2: "QA", a3: "QAT", num: "634", dial: "974" }
+romania: { name: "Romania",  a2: "RO", a3: "ROU", num: "642", dial: "40" }
+russianFederation: { name: "Russian Federation",  a2: "RU", a3: "RUS", num: "643", dial: "7" }
+rwanda: { name: "Rwanda",  a2: "RW", a3: "RWA", num: "646", dial: "250" }
+reunion: { name: "Reunion",  a2: "RE", a3: "REU", num: "638", dial: "262" }
+saintBarthelemy: { name: "Saint Barthelemy",  a2: "BL", a3: "BLM", num: "652", dial: "590" }
+saintHelena: { name: "Saint Helena",  a2: "SH", a3: "SHN", num: "654", dial: "290" }
+saintKittsandNevis: { name: "Saint Kitts and Nevis",  a2: "KN", a3: "KNA", num: "659", dial: "1-869" }
+saintLucia: { name: "Saint Lucia",  a2: "LC", a3: "LCA", num: "662", dial: "1-758" }
+saintMartinFrenchpart: { name: "Saint Martin (French part)",  a2: "MF", a3: "MAF", num: "663", dial: "590" }
+saintPierreandMiquelon: { name: "Saint Pierre and Miquelon",  a2: "PM", a3: "SPM", num: "666", dial: "508" }
+saintVincentandtheGrenadines: { name: "Saint Vincent and the Grenadines",  a2: "VC", a3: "VCT", num: "670", dial: "1-784" }
+samoa: { name: "Samoa",  a2: "WS", a3: "WSM", num: "882", dial: "685" }
+sanMarino: { name: "San Marino",  a2: "SM", a3: "SMR", num: "674", dial: "378" }
+saoTomeandPrincipe: { name: "Sao Tome and Principe",  a2: "ST", a3: "STP", num: "678", dial: "239" }
+saudiArabia: { name: "Saudi Arabia",  a2: "SA", a3: "SAU", num: "682", dial: "966" }
+senegal: { name: "Senegal",  a2: "SN", a3: "SEN", num: "686", dial: "221" }
+serbia: { name: "Serbia",  a2: "RS", a3: "SRB", num: "688", dial: "381" }
+seychelles: { name: "Seychelles",  a2: "SC", a3: "SYC", num: "690", dial: "248" }
+sierraLeone: { name: "Sierra Leone",  a2: "SL", a3: "SLE", num: "694", dial: "232" }
+singapore: { name: "Singapore",  a2: "SG", a3: "SGP", num: "702", dial: "65" }
+sintMaartenDutchpart: { name: "Sint Maarten (Dutch part)",  a2: "SX", a3: "SXM", num: "534", dial: "1-721" }
+slovakia: { name: "Slovakia",  a2: "SK", a3: "SVK", num: "703", dial: "421" }
+slovenia: { name: "Slovenia",  a2: "SI", a3: "SVN", num: "705", dial: "386" }
+solomonIslands: { name: "Solomon Islands",  a2: "SB", a3: "SLB", num: "90", dial: "677" }
+somalia: { name: "Somalia",  a2: "SO", a3: "SOM", num: "706", dial: "252" }
+southAfrica: { name: "South Africa",  a2: "ZA", a3: "ZAF", num: "710", dial: "27" }
+southGeorgiaandtheSouthSandwichIslands: { name: "South Georgia and the South Sandwich Islands",  a2: "GS", a3: "SGS", num: "239", dial: "500" }
+southSudan: { name: "South Sudan",  a2: "SS", a3: "SSD", num: "728", dial: "211" }
+spain: { name: "Spain",  a2: "ES", a3: "ESP", num: "724", dial: "34" }
+sriLanka: { name: "Sri Lanka",  a2: "LK", a3: "LKA", num: "144", dial: "94" }
+sudan: { name: "Sudan",  a2: "SD", a3: "SDN", num: "729", dial: "249" }
+suriname: { name: "Suriname",  a2: "SR", a3: "SUR", num: "740", dial: "597" }
+svalbardandJanMayen: { name: "Svalbard and Jan Mayen",  a2: "SJ", a3: "SJM", num: "744", dial: "47" }
+swaziland: { name: "Swaziland",  a2: "SZ", a3: "SWZ", num: "748", dial: "268" }
+sweden: { name: "Sweden",  a2: "SE", a3: "SWE", num: "752", dial: "46" }
+switzerland: { name: "Switzerland",  a2: "CH", a3: "CHE", num: "756", dial: "41" }
+syrianArabRepublic: { name: "Syrian Arab Republic",  a2: "SY", a3: "SYR", num: "760", dial: "963" }
+taiwan: { name: "Taiwan",  a2: "TW", a3: "TWN", num: "158", dial: "886" }
+tajikistan: { name: "Tajikistan",  a2: "TJ", a3: "TJK", num: "762", dial: "992" }
+unitedRepublicofTanzania: { name: "United Republic of Tanzania",  a2: "TZ", a3: "TZA", num: "834", dial: "255" }
+thailand: { name: "Thailand",  a2: "TH", a3: "THA", num: "764", dial: "66" }
+timorLeste: { name: "Timor-Leste",  a2: "TL", a3: "TLS", num: "626", dial: "670" }
+togo: { name: "Togo",  a2: "TG", a3: "TGO", num: "768", dial: "228" }
+tokelau: { name: "Tokelau",  a2: "TK", a3: "TKL", num: "772", dial: "690" }
+tonga: { name: "Tonga",  a2: "TO", a3: "TON", num: "776", dial: "676" }
+trinidadandTobago: { name: "Trinidad and Tobago",  a2: "TT", a3: "TTO", num: "780", dial: "1-868" }
+tunisia: { name: "Tunisia",  a2: "TN", a3: "TUN", num: "788", dial: "216" }
+turkey: { name: "Turkey",  a2: "TR", a3: "TUR", num: "792", dial: "90" }
+turkmenistan: { name: "Turkmenistan",  a2: "TM", a3: "TKM", num: "795", dial: "993" }
+turksandCaicosIslands: { name: "Turks and Caicos Islands",  a2: "TC", a3: "TCA", num: "796", dial: "1-649" }
+tuvalu: { name: "Tuvalu",  a2: "TV", a3: "TUV", num: "798", dial: "688" }
+uganda: { name: "Uganda",  a2: "UG", a3: "UGA", num: "800", dial: "256" }
+ukraine: { name: "Ukraine",  a2: "UA", a3: "UKR", num: "804", dial: "380" }
+unitedArabEmirates: { name: "United Arab Emirates",  a2: "AE", a3: "ARE", num: "784", dial: "971" }
+unitedKingdom: { name: "United Kingdom",  a2: "GB", a3: "GBR", num: "826", dial: "44" }
+unitedStates: { name: "United States",  a2: "US", a3: "USA", num: "840", dial: "1" }
+unitedStatesMinorOutlyingIslands: { name: "United States Minor Outlying Islands",  a2: "UM", a3: "UMI", num: "581", dial: "1" }
+uruguay: { name: "Uruguay",  a2: "UY", a3: "URY", num: "858", dial: "598" }
+uzbekistan: { name: "Uzbekistan",  a2: "UZ", a3: "UZB", num: "860", dial: "998" }
+vanuatu: { name: "Vanuatu",  a2: "VU", a3: "VUT", num: "548", dial: "678" }
+venezuela: { name: "Venezuela",  a2: "VE", a3: "VEN", num: "862", dial: "58" }
+vietNam: { name: "Viet Nam",  a2: "VN", a3: "VNM", num: "704", dial: "84" }
+britishVirginIslands: { name: "British Virgin Islands",  a2: "VG", a3: "VGB", num: "92", dial: "1-284" }
+usVirginIslands: { name: "US Virgin Islands",  a2: "VI", a3: "VIR", num: "850", dial: "1-340" }
+wallisandFutuna: { name: "Wallis and Futuna",  a2: "WF", a3: "WLF", num: "876", dial: "681" }
+westernSahara: { name: "Western Sahara",  a2: "EH", a3: "ESH", num: "732", dial: "212" }
+yemen: { name: "Yemen",  a2: "YE", a3: "YEM", num: "887", dial: "967" }
+zambia: { name: "Zambia",  a2: "ZM", a3: "ZMB", num: "894", dial: "260" }
+zimbabwe: { name: "Zimbabwe",  a2: "ZW", a3: "ZWE", num: "716", dial: "263" }

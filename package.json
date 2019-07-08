@@ -2,18 +2,14 @@
   "name": "practice",
   "version": "0.1.0",
   "scripts": {
-
     "bs-build": "bsb -make-world",
     "bs-watch": "bsb -make-world -w",
     "bs-clean": "bsb -clean-world",
-
     "wp-build": "webpack src/js/index.js dist/bundle.js",
     "wp-watch": "webpack --watch",
     "wp-dev-server": "webpack-dev-server --open",
-
     "start": "npm run bs-build && npm run wp-build && npm run wp-dev-server",
     "build": "bsb -make-world && webpack src/index.js dist/bundle.js"
-
   },
   "keywords": [
     "BuckleScript"
@@ -35,5 +31,9 @@
     "webpack": "^4.33.0",
     "webpack-cli": "^3.3.2",
     "webpack-dev-server": "^3.6.0"
+  },
+  "dependencies": {
+    "bs-abstract": "^0.17.0",
+    "relude": "^0.17.0"
   }
 }
