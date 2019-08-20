@@ -1,65 +1,56 @@
 
 open Webapi.Dom;
 
-//type html_node_like('t) = 
-//    Node(Dom.node) 
-//  | Element(Dom.element) 
-//  | HtmlElement(Dom.htmlElement) 
-//  | HtmlDocument(Dom.htmlDocument) 
-//  | Document(Dom.document);
-//
-type html_array_like = 
+
+type html_node_like = [
+    `RQ_Node(Dom.node) 
+  | `RQ_Element(Dom.element) 
+  | `RQ_HtmlElement(Dom.htmlElement) 
+  | `RQ_HtmlDocument(Dom.htmlDocument) 
+  | `RQ_Document(Dom.document)
+  | `RQ_EventTarget(Dom.eventTarget)
+]
+
+type html_array_like =
     RQ_HtmlCollection(Dom.htmlCollection) 
   | RQ_NodeList(Dom.nodeList) 
   | RQ_NodeArray(array(Dom.node)) 
   | RQ_ElementArray(array(Dom.element))
   | RQ_HtmlElementArray(array(Dom.htmlElement))
   | RQ_EventTargetArray(array(Dom.eventTarget))
-  
 
+type html_array = 
+    RQ_NodeArray(array(Dom.node)) 
+  | RQ_ElementArray(array(Dom.element))
+  | RQ_HtmlElementArray(array(Dom.htmlElement))
+  | RQ_EventTargetArray(array(Dom.eventTarget))
 
-type rQuery = array(Dom.element);
+type reQuery = array(Dom.htmlElement);
 
-let wrapElement: (Dom.element => rQuery) = (element) => [|element|]; 
+let js_nodeListToArray: Dom.nodeList => array(Dom.node) = [%raw {| 
+  function(elements) {
+    return Array.prototype.slice.apply(elements)
+  } 
+|}]
 
-let wrapElements: (html_array_like => rQuery) = elements => {
-  switch(elements) {
-    | RQ_HtmlCollection(elements) => [%raw {|
-        return Array.prototype.slice.apply(elements);
-      |}]
-    | RQ_NodeList(elements) => [%raw {|
-        return Array.prototype.slice.apply(elements);
-      |}]
-    | RQ_EventTargetArray(elements) => [%raw {|
-        return Array.prototype.slice.apply(elements);
-      |}]
-    | RQ_NodeArray(elements) => [%raw {|
-        return Array.prototype.slice.apply(elements);
-      |}]
-    | RQ_ElementArray(elements) => [%raw {|
-        return Array.prototype.slice.apply(elements);
-      |}]
-    | RQ_HtmlElementArray(elements) => [%raw {|
-        return Array.prototype.slice.apply(elements);
-      |}]
-  }
-}
+let js_htmlCollectionToArray: Dom.htmlCollection => array(Dom.element) = [%raw {| 
+  function(elements) {
+    return Array.prototype.slice.apply(elements);
+  } 
+|}]
 
-let arrayFromNodeList: Dom.nodeList => array(Dom.node) = {
-  [%raw {|
-    function(nodeList) {
-      return Array.prototype.slice.apply(nodeList);
-    }
-  |}];
-}
+let wrapElement: (Dom.htmlElement => reQuery) = (element) => [|element|]; 
 
-let arrayFromHtmlCollection: Dom.htmlCollection => array(Dom.element) = {
-  [%raw {|
-    function(htmlCollection) {
-      return Array.prototype.slice.apply(htmlCollection);
-    }
-  |}];
-}
+//let wrapHtmlElements: (html_array_like => reQuery) = elements => {
+//  switch(elements) {
+//    | RQ_HtmlCollection(elements) => js_htmlCollectionToArray(elements)
+//    | RQ_NodeList(elements) => js_nodeListToArray(elements)
+//    | RQ_EventTargetArray(elements) => elements
+//    | RQ_NodeArray(elements) => elements
+//    | RQ_ElementArray(elements) => elements
+//    | RQ_HtmlElementArray(elements) => elements
+//  }
+//}
 
 let appendChild = (parent, child) => {
   Element.appendChild(parent, child);
@@ -116,6 +107,6 @@ let getByIdWithDefault: (string, 'a => 'b) => (Dom.element) = (id, defaultFn) =>
   }
 }
 
-let getByClassName: (string => rQuery(option(Dom.eventTarget_like('a)))) = (className) => {
-  wrapElements(document |> Document.getElementsByClassName(className));
-};
+//let getByClassName: (string => rQuery) = (className) => {
+//  wrapElements(document |> Document.getElementsByClassName(className));
+//};

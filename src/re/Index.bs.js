@@ -8,6 +8,7 @@ var Relude_Option = require("relude/src/Relude_Option.bs.js");
 var ReQuery$Practice = require("./lib/requery/ReQuery.bs.js");
 var Relude_Js_Console = require("relude/src/js/Relude_Js_Console.bs.js");
 var Webapi__Dom__Element = require("bs-webapi/src/Webapi/Webapi__Dom/Webapi__Dom__Element.js");
+var Webapi__Dom__HtmlElement = require("bs-webapi/src/Webapi/Webapi__Dom/Webapi__Dom__HtmlElement.js");
 
 Relude_Js_Console.IO[/* log */0]("Hello, BuckleScript and Reason!");
 
@@ -27,7 +28,7 @@ function printClicked(param) {
 }
 
 function applicationRoot_000(param) {
-  var el = document.createElement("div");
+  var el = Belt_Option.getExn(Webapi__Dom__Element.asHtmlElement(document.createElement("div")));
   el.id = "applicationRoot";
   el.className = "root";
   el.setAttribute("style", "background-color: red; height: 200px; width: 200px;");
@@ -36,7 +37,7 @@ function applicationRoot_000(param) {
 }
 
 function applicationRoot_001(rootNode) {
-  var parent = Curry._2(Relude_Option.flatMap, Webapi__Dom__Element.ofNode, Caml_option.nullable_to_opt(rootNode.parentNode));
+  var parent = Curry._2(Relude_Option.flatMap, Webapi__Dom__HtmlElement.ofNode, Caml_option.nullable_to_opt(rootNode.parentNode));
   if (parent !== undefined) {
     var p = Caml_option.valFromOption(parent);
     var res = p.removeChild(rootNode);

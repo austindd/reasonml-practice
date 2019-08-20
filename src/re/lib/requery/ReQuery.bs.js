@@ -6,45 +6,21 @@ var Belt_Array = require("bs-platform/lib/js/belt_Array.js");
 var Belt_Option = require("bs-platform/lib/js/belt_Option.js");
 var Caml_option = require("bs-platform/lib/js/caml_option.js");
 
+var js_nodeListToArray = ( 
+  function(elements) {
+    return Array.prototype.slice.apply(elements)
+  } 
+);
+
+var js_htmlCollectionToArray = ( 
+  function(elements) {
+    return Array.prototype.slice.apply(elements);
+  } 
+);
+
 function wrapElement(element) {
   return /* array */[element];
 }
-
-function wrapElements(elements) {
-  switch (elements.tag | 0) {
-    case 0 : 
-        return (
-        function(htmlCollection) {
-          return Array.prototype.slice.apply(htmlCollection);
-        }
-      );
-    case 1 : 
-        return (
-        function(nodeList) {
-          return Array.prototype.slice.apply(nodeList);
-        }
-      );
-    case 2 : 
-        return (
-        function(nodeArray) {
-          return Array.prototype.slice.apply(nodeArray);
-        }
-      );
-    
-  }
-}
-
-var arrayFromNodeList = (
-    function(nodeList) {
-      return Array.prototype.slice.apply(nodeList);
-    }
-  );
-
-var arrayFromHtmlCollection = (
-    function(htmlCollection) {
-      return Array.prototype.slice.apply(htmlCollection);
-    }
-  );
 
 function appendChild(parent, child) {
   child.appendChild(parent);
@@ -106,12 +82,9 @@ function getByIdWithDefault(id, defaultFn) {
   }
 }
 
-var getByClassName = /* () */0;
-
+exports.js_nodeListToArray = js_nodeListToArray;
+exports.js_htmlCollectionToArray = js_htmlCollectionToArray;
 exports.wrapElement = wrapElement;
-exports.wrapElements = wrapElements;
-exports.arrayFromNodeList = arrayFromNodeList;
-exports.arrayFromHtmlCollection = arrayFromHtmlCollection;
 exports.appendChild = appendChild;
 exports.appendChildren = appendChildren;
 exports.setAttrs = setAttrs;
@@ -119,5 +92,4 @@ exports.makeElement = makeElement;
 exports.getById = getById;
 exports.getByIdWithExn = getByIdWithExn;
 exports.getByIdWithDefault = getByIdWithDefault;
-exports.getByClassName = getByClassName;
-/* arrayFromNodeList Not a pure module */
+/* js_nodeListToArray Not a pure module */

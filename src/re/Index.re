@@ -21,30 +21,30 @@ module PracticeMain = {
   let printClicked = (_) => Js.log("CLICKED");
 
   type applicationRoot = {
-    make: unit => Dom.element,
-    detach: Dom.element => option(Dom.element)
+    make: unit => Dom.htmlElement,
+    remove: Dom.htmlElement => option(Dom.htmlElement)
   }
 
   let applicationRoot = {
-
     make: (_) => document
       |> Document.createElement("div")
+      |> Element.asHtmlElement
+      |> Belt.Option.getExn
       |> (el) => {
-          Element.setId(el, "applicationRoot");
-          Element.setClassName(el, "root");
-          el |> Element.setAttribute("style", "background-color: red; height: 200px; width: 200px;");
-          Element.asEventTarget(el) |> EventTarget.addEventListener("click", printClicked);
+          HtmlElement.setId(el, "applicationRoot");
+          HtmlElement.setClassName(el, "root");
+          el |> HtmlElement.setAttribute("style", "background-color: red; height: 200px; width: 200px;");
+          el |> HtmlElement.addEventListener("click", printClicked);
           el;
         },
 
-    detach: (rootNode) => {
+    remove: (rootNode) => {
       let parent = rootNode
-        |> Element.parentNode
-        |> Option.flatMap(Element.ofNode);
-
-      switch(parent) {
+        |> HtmlElement.parentNode
+        |> Option.flatMap(HtmlElement.ofNode);
+      switch(parent) { // parentNode will may be undefined if element is not currently attached
         | Some(p) => {
-            let res = p |> Element.removeChild(rootNode);
+            let res = p |> HtmlElement.removeChild(rootNode);
             Js.log(p);
             Some(res);
           }
@@ -58,8 +58,7 @@ module PracticeMain = {
   documentBody |> HtmlElement.appendChild(root);
 
   Js.log(root);
-
-  let headerAttrs = Js.Dict.empty();
+  let headerAttrs = Js.Dict.empty()
   Js.Dict.set(headerAttrs, "color", "blue");
 
   let header = ReQuery.makeElement("h1", Some(headerAttrs), None);
